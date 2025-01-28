@@ -23,7 +23,7 @@ public class OrdersDataService implements DataAccessInterface<OrderModel>
 
     public List<OrderModel> findAll()
     {
-        query = "SELECT * FROM orders";
+        query = "SELECT * FROM ORDERS";
         List<OrderModel> orders = new ArrayList<OrderModel>();
         try
         {
@@ -48,7 +48,7 @@ public class OrdersDataService implements DataAccessInterface<OrderModel>
 
     public boolean create(OrderModel order)
     {
-        query = "INSERT INTO orders(ORDER_NO, PRODUCT_NAME, PRICE, QUANTITY) VALUES(?, ?, ?, ?)";
+        query = "INSERT INTO ORDERS(ORDER_NO, PRODUCT_NAME, PRICE, QUANTITY) VALUES(?, ?, ?, ?)";
         try
         {
             // Execute SQL Insert

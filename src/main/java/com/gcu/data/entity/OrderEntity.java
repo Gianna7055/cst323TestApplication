@@ -2,7 +2,7 @@ package com.gcu.data.entity;
 
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("orders")
+@Table("ORDERS")
 public class OrderEntity
 {
     private Long id;

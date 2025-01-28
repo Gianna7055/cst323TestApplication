@@ -12,6 +12,6 @@ public interface OrdersRepository extends CrudRepository<OrderEntity, Long>
     // Override the find all method
     @SuppressWarnings("null")
     @Override
-    @Query(value = "SELECT * FROM orders")
+    @Query(value = "SELECT * FROM ORDERS")
     public List<OrderEntity> findAll();
 }
