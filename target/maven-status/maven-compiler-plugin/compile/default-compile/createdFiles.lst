@@ -3,6 +3,7 @@ com/gcu/data/repository/OrdersRepository.class
 com/gcu/business/OrdersBusinessInterface.class
 com/gcu/business/OrdersBusinessService.class
 com/gcu/business/SecurityBusinessService.class
+com/gcu/controller/HomeController.class
 com/gcu/cst323TestApplication.class
 com/gcu/data/OrdersDataService.class
 com/gcu/controller/API/OrdersRestController.class

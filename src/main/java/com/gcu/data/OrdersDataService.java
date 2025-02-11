@@ -15,6 +15,7 @@ public class OrdersDataService implements DataAccessInterface<OrderModel>
 {
     JdbcTemplate jdbcTemplateObject;
     String query = "";
+    String databaseName = "orders";
 
     public OrdersDataService(DataSource dataSource)
     {
@@ -23,7 +24,7 @@ public class OrdersDataService implements DataAccessInterface<OrderModel>
 
     public List<OrderModel> findAll()
     {
-        query = "SELECT * FROM ORDERS";
+        query = "SELECT * FROM " + databaseName;
         List<OrderModel> orders = new ArrayList<OrderModel>();
         try
         {
@@ -48,7 +49,7 @@ public class OrdersDataService implements DataAccessInterface<OrderModel>
 
     public boolean create(OrderModel order)
     {
-        query = "INSERT INTO ORDERS(ORDER_NO, PRODUCT_NAME, PRICE, QUANTITY) VALUES(?, ?, ?, ?)";
+        query = "INSERT INTO " + databaseName + "(ORDER_NO, PRODUCT_NAME, PRICE, QUANTITY) VALUES(?, ?, ?, ?)";
         try
         {
             // Execute SQL Insert
